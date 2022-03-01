@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Akshit Gupta",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}

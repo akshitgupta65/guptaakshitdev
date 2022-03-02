@@ -11,8 +11,5 @@
   "devDependencies": {
     "parcel": "^2.3.2",
     "process": "^0.11.10"
-  },
-  "dependencies": {
-    "@octokit/rest": "^18.12.0"
   }
 }

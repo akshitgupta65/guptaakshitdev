@@ -19,27 +19,9 @@ const stickyNav = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`,
 });
 
 headerObserver.observe(header);
-
-// const navHeight = nav.getBoundingClientRect().height; // calculating the height and using it dynamically.
-
-// const stickyNavCallback = function (entries) {
-//   const [entry] = entries;
-//   // console.log(entry);
-
-//   if (!entry.isIntersecting) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// };
-
-// const headerObserver = new IntersectionObserver(stickyNavCallback, {
-//   root: null, // means viewport
-//   threshold: 0, // means completely out of view
-//   rootMargin: `-${navHeight}px`, // in order to increase or decrease the height of the target element. Basically to delay or to make the intersection happen early.
-// });
-// headerObserver.observe(header);
 
 // 2. (who-am-I) Insert a video message, also make some space for it so that it doesnot ruin the layout of the page after video has been loaded
 

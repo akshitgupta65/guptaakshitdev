@@ -1,15 +1,20 @@
 html {
   scroll-behavior: smooth;
+  display: table;
+  margin: auto;
 }
 
 body {
-  font-family: arial;
-  background-color: #e3e3;
+  font-family: poppins;
+  background-color: rgba(145, 115, 145, 0.2);
   color: #3e3e3e;
   border: 1px solid black;
   min-width: 900px;
-  padding-left: 5em;
-  padding-right: 5em;
+  max-width: 1000px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .content {
@@ -18,7 +23,8 @@ body {
 
 section {
   height: auto;
-  border-bottom: 2px solid black;
+  width: 100%;
+  border-top: 5px solid black;
 }
 
 section h1 {
@@ -37,24 +43,24 @@ section h1 {
 }
 
 /* Header  */
-.header {
-  display: flex;
-}
 
 .nav {
+  display: block;
   height: 50px;
   color: #3e3e3e;
-  padding: 0.3em;
-  border-bottom: 2px solid rgb(243, 139, 221);
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-.sticky {
+.nav.sticky {
   position: fixed;
-  background-color: #e3e3;
+  background-color: rgb(240, 230, 240);
+  animation: alternate-reverse;
 }
 
 .nav p {
   display: inline;
+  width: 50%;
   font: 2.5em courier;
   font-weight: 800;
   padding-left: 0.5em;
@@ -62,16 +68,23 @@ section h1 {
 }
 
 .nav_items {
+  display: flex;
   float: right;
-  padding: 1.2em;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 4rem;
 }
 
 a.nav_items-link {
-  font-size: smaller;
+  color: #3e3e3e;
+  font-size: large;
+  font-weight: 400;
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 2em;
-  transition-duration: 0.5s;
+  display: block;
+  transition: all 0.3s;
 }
 
 a.nav_items-link:hover {

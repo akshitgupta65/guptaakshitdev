@@ -1,13 +1,20 @@
 html {
   scroll-behavior: smooth;
+  display: table;
+  margin: auto;
 }
 
 body {
-  font-family: arial;
-  background-color: #e3e3;
+  font-family: poppins;
+  background-color: rgba(145, 115, 145, 0.2);
   color: #3e3e3e;
-  border: 2px solid black;
-  min-width: 1100px;
+  border: 1px solid black;
+  min-width: 900px;
+  max-width: 1000px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .content {
@@ -15,7 +22,9 @@ body {
 }
 
 section {
-  border-bottom: 2px solid black;
+  height: auto;
+  width: 100%;
+  border-top: 3px solid black;
 }
 
 section h1 {
@@ -29,33 +38,59 @@ section h1 {
   text-align: justify;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Header  */
+
 .nav {
+  display: flex;
   height: 50px;
-  background-color: #3e3e3e;
-  padding: 0.3em;
+  color: #3e3e3e;
+  padding-top: 1em;
+  margin-inline-end: 10px;
+  z-index: 1;
+}
+
+.nav.sticky {
+  position: fixed;
+  min-width: 965px;
+  background-color: rgba(238, 229, 238, 0.95);
+  animation: alternate-reverse;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  border-bottom: 3px solid black;
 }
 
 .nav p {
-  display: inline;
   font: 2.5em courier;
-  color: #efefef;
-  padding-left: 0.5em;
+  font-weight: 800;
+  align-self: center;
+  padding: 0.3em;
   letter-spacing: 5px;
+  border: 10px double rgb(32, 31, 43);
+  border-radius: 50%;
 }
 
 .nav_items {
+  display: flex;
   float: right;
-  padding: 1.2em;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 3rem;
 }
 
 a.nav_items-link {
-  font-size: smaller;
-  color: #efefef;
+  color: #3e3e3e;
+  font-size: 1.2em;
+  font-weight: 400;
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 2em;
-  transition-duration: 0.5s;
+  display: block;
+  transition: all 0.3s;
 }
 
 a.nav_items-link:hover {
@@ -65,6 +100,14 @@ a.nav_items-link:hover {
 }
 
 /* Introduction */
+
+video {
+  margin: 1em;
+  border: 4px solid black;
+  width: 95%;
+  z-index: 0;
+}
+
 .heading {
   text-align: right;
   display: block;
@@ -79,7 +122,7 @@ a.nav_items-link:hover {
 
 /* My Projects */
 .window {
-  height: 440px;
+  display: block;
   align-content: center;
 }
 
@@ -134,9 +177,8 @@ footer {
   background-color: #3e3e3e;
   padding: 0.3em;
   height: 15em;
-}
-
-.black {
   color: #efefef;
+}
+h2 {
   letter-spacing: 0.2em;
 }

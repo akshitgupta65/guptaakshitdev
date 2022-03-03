@@ -37,14 +37,20 @@ section h1 {
 }
 
 /* Header  */
+.header {
+  display: flex;
+}
+
 .nav {
   height: 50px;
   color: #3e3e3e;
   padding: 0.3em;
+  border-bottom: 2px solid rgb(243, 139, 221);
 }
 
 .sticky {
-  display: block;
+  position: fixed;
+  background-color: #e3e3;
 }
 
 .nav p {

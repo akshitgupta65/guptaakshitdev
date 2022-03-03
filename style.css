@@ -6,8 +6,10 @@ body {
   font-family: arial;
   background-color: #e3e3;
   color: #3e3e3e;
-  border: 2px solid black;
-  min-width: 1100px;
+  border: 1px solid black;
+  min-width: 900px;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .content {
@@ -15,6 +17,7 @@ body {
 }
 
 section {
+  height: auto;
   border-bottom: 2px solid black;
 }
 
@@ -29,17 +32,25 @@ section h1 {
   text-align: justify;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Header  */
 .nav {
   height: 50px;
-  background-color: #3e3e3e;
+  color: #3e3e3e;
   padding: 0.3em;
+}
+
+.sticky {
+  display: block;
 }
 
 .nav p {
   display: inline;
   font: 2.5em courier;
-  color: #efefef;
+  font-weight: 800;
   padding-left: 0.5em;
   letter-spacing: 5px;
 }
@@ -51,7 +62,6 @@ section h1 {
 
 a.nav_items-link {
   font-size: smaller;
-  color: #efefef;
   text-decoration: none;
   padding-left: 1em;
   padding-right: 2em;
@@ -79,7 +89,7 @@ a.nav_items-link:hover {
 
 /* My Projects */
 .window {
-  height: 440px;
+  display: block;
   align-content: center;
 }
 
@@ -134,9 +144,8 @@ footer {
   background-color: #3e3e3e;
   padding: 0.3em;
   height: 15em;
-}
-
-.black {
   color: #efefef;
+}
+h2 {
   letter-spacing: 0.2em;
 }

@@ -1,5 +1,9 @@
 // TASKS
+
 // 1. (window) Load each section after 25% scroll
+
+const 
+
 
 // 2. (who-am-I) Insert a video message, also make some space for it so that it doesnot ruin the layout of the page after video has been loaded
 

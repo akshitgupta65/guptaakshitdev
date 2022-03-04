@@ -3,7 +3,9 @@ const header = document.querySelector(".header");
 
 // TASKS
 
-// 1. (window) Load each section after 25% scroll
+// (window) Load each section after 25% scroll
+
+// Sticky Navigation Bar
 
 const navHeight = nav.getBoundingClientRect().height;
 console.log(navHeight);
@@ -23,10 +25,40 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(header);
 
-// 2. (who-am-I) Insert a video message, also make some space for it so that it doesnot ruin the layout of the page after video has been loaded
+// Slider Component to view projects
+
+const projects = document.querySelectorAll(".project");
+const btnLeft = document.querySelector(".slider_btn--left");
+const btnRight = document.querySelector(".slider_btn--right");
+
+const displayProject = function (projectCount) {
+  console.log(projectCount);
+  console.log(projects.length);
+  projects.forEach((project, index) => {
+    project.style.transform = `translateX(${100 * (index - projectCount)}%)`;
+  });
+};
+displayProject(0);
+
+let curProject = 0;
+const maxProject = projects.length;
+
+const nextProject = function () {
+  curProject === maxProject - 1 ? (curProject = 0) : curProject++;
+  displayProject(curProject);
+};
+
+const prevProject = function () {
+  curProject === 0 ? (curProject = maxProject - 1) : curProject--;
+  displayProject(curProject);
+};
+
+btnRight.addEventListener("click", nextProject);
+
+btnLeft.addEventListener("click", prevProject);
+
+//
+//
+// 2. (who-am-I) Insert a video message
 
 // 3. (my-work) when hover on window, slide the project description from above and blacken the background image
-
-// 4. (my-work) add all projects in a row (100,200,300,400,...)
-
-// 5. (my-work) to view my projects create a slider, when user clicks right button, slide the slider to left and vice versa

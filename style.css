@@ -42,6 +42,7 @@ section h1 {
   display: none;
 }
 
+/* /////////////////////////////////////////////////////// */
 /* Header  */
 
 .nav {
@@ -50,7 +51,7 @@ section h1 {
   color: #3e3e3e;
   padding-top: 1em;
   margin-inline-end: 10px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .nav.sticky {
@@ -99,6 +100,7 @@ a.nav_items-link:hover {
   text-shadow: 2px -1px 8px;
 }
 
+/* /////////////////////////////////////////////////////// */
 /* Introduction */
 
 video {
@@ -120,6 +122,7 @@ video {
   letter-spacing: 0.1em;
 }
 
+/* ///////////////////////////////////////////////////// */
 /* My Projects */
 
 .window {
@@ -138,10 +141,17 @@ video {
   align-items: center;
   justify-content: center;
   transition: transform 1s;
+  z-index: 3;
 
   background-color: #efefef;
   margin-top: 1.5em;
   transform: translateX(0%);
+}
+
+img {
+  width: inherit;
+  height: inherit;
+  z-index: 2;
 }
 
 .project_text {
@@ -149,12 +159,44 @@ video {
   top: 0;
   left: 0;
   width: 97%;
+  height: inherit;
   padding-left: 3%;
   padding-bottom: 1%;
-  font-size: large;
+  z-index: 2;
 
-  background-color: rgb(65, 63, 63);
+  font-size: large;
+  background-color: rgba(65, 63, 63, 0.8);
   color: #e4dede;
+}
+
+.animation_fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    z-index: 2;
+  }
+  to {
+    z-index: 3;
+  }
+}
+
+.animation_fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeout {
+  from {
+    z-index: 3;
+  }
+  to {
+    z-index: 2;
+  }
 }
 
 .project_text--desc {
@@ -164,7 +206,7 @@ video {
 
 .slider_btn {
   position: relative;
-  z-index: 10;
+  z-index: 9;
   border: none;
   border-radius: 70%;
   background-color: rgba(253, 252, 247, 0.644);
@@ -191,26 +233,31 @@ video {
   transform: translate(50%, -50%);
 }
 
+/* //////////////////////////////////////////////////////// */
 /* MY Journey  */
 
+/* //////////////////////////////////////////////////////// */
 /* Looking Forward */
 
 .forward {
   height: 250px;
   display: flex;
 }
+
 .part1 {
   background-color: #efefef;
   width: 30%;
   margin: 1.5%;
   height: 200px;
 }
+
 .part2 {
   background-color: #efefef;
   width: 30%;
   margin: 1.5%;
   height: 200px;
 }
+
 .part3 {
   background-color: #efefef;
   width: 30%;
@@ -218,6 +265,7 @@ video {
   height: 200px;
 }
 
+/* //////////////////////////////////////////////////////// */
 /* Footer */
 footer {
   background-color: #3e3e3e;
@@ -225,6 +273,7 @@ footer {
   height: 15em;
   color: #efefef;
 }
+
 h2 {
   letter-spacing: 0.2em;
 }

@@ -1,18 +1,19 @@
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 
+const projects = document.querySelectorAll(".project");
+const btnLeft = document.querySelector(".slider_btn--left");
+const btnRight = document.querySelector(".slider_btn--right");
+
 // TASKS
 
 // (window) Load each section after 25% scroll
 
+/////////////////////////////////////////////////////////////
 // Sticky Navigation Bar
-
-const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) nav.classList.add("sticky");
   else nav.classList.remove("sticky");
@@ -25,15 +26,10 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(header);
 
+/////////////////////////////////////////////////////////////
 // Slider Component to view projects
 
-const projects = document.querySelectorAll(".project");
-const btnLeft = document.querySelector(".slider_btn--left");
-const btnRight = document.querySelector(".slider_btn--right");
-
 const displayProject = function (projectCount) {
-  console.log(projectCount);
-  console.log(projects.length);
   projects.forEach((project, index) => {
     project.style.transform = `translateX(${100 * (index - projectCount)}%)`;
   });
@@ -54,11 +50,38 @@ const prevProject = function () {
 };
 
 btnRight.addEventListener("click", nextProject);
-
 btnLeft.addEventListener("click", prevProject);
 
+/////////////////////////////////////////////////////////////
+// Move Slider automatically after 4s
+
+//////////////////////////////////////////////////////////////
+// Displaying project descriptions and blur background
+
+const mouseEnter = function (e) {
+  e.preventDefault();
+  const targetEl = this.querySelector(".project_text");
+  targetEl.classList.add("animation_fadeIn");
+  targetEl.classList.remove("animation_fadeOut");
+  targetEl.style.zIndex = "3";
+};
+
+const mouseLeave = function (e) {
+  e.preventDefault();
+  const targetEl = this.querySelector(".project_text");
+  targetEl.classList.add("animation_fadeOut");
+  targetEl.classList.remove("animation_fadeIn");
+  targetEl.style.zIndex = "2";
+};
+
+projects.forEach((project) => {
+  project.addEventListener("mouseenter", mouseEnter);
+  project.addEventListener("mouseleave", mouseLeave);
+});
+//////////////////////////////////////////////////////////////
 //
-//
+
+/////////////////////////////////////////////////////////////
 // 2. (who-am-I) Insert a video message
 
 // 3. (my-work) when hover on window, slide the project description from above and blacken the background image

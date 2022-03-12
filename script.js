@@ -5,9 +5,11 @@ const projects = document.querySelectorAll(".project");
 const btnLeft = document.querySelector(".slider_btn--left");
 const btnRight = document.querySelector(".slider_btn--right");
 
-// TASKS
+const tabContainer = document.querySelector(".tab_container");
+const tabs = document.querySelectorAll(".tab");
+const tabContent = document.querySelectorAll(".tab_content");
 
-// (window) Load each section after 25% scroll
+// TASKS
 
 /////////////////////////////////////////////////////////////
 // Sticky Navigation Bar
@@ -79,9 +81,26 @@ projects.forEach((project) => {
   project.addEventListener("mouseleave", mouseLeave);
 });
 //////////////////////////////////////////////////////////////
-//
+// Activating Tabs in My Journey
+
+tabContainer.addEventListener("click", function (e) {
+  const clickedTab = e.target.closest(".tab");
+  if (!clickedTab) return;
+
+  // Removing and Adding ACTIVE class from tabs
+  tabs.forEach((tab) => tab.classList.remove("tab--active"));
+  clickedTab.classList.add("tab--active");
+
+  // Removing and Adding ACTIVE class from tabs
+  tabContent.forEach((content) =>
+    content.classList.remove("tab_content--active")
+  );
+
+  let tabNum = clickedTab.dataset.tab;
+  const targetContent = document.querySelector(`.tab_content--${tabNum}`);
+  targetContent.classList.add("tab_content--active");
+});
 
 /////////////////////////////////////////////////////////////
-// 2. (who-am-I) Insert a video message
-
-// 3. (my-work) when hover on window, slide the project description from above and blacken the background image
+// 1. (who-am-I) Insert a video message
+// 2. (window) Load each section after 25% scroll

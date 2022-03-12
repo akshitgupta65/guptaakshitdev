@@ -136,7 +136,7 @@ video {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 35rem;
+  height: 34rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,6 +144,7 @@ video {
   z-index: 3;
 
   background-color: #efefef;
+  outline: 2px double rgb(65, 63, 63);
   margin-top: 1.5em;
   transform: translateX(0%);
 }
@@ -151,6 +152,7 @@ video {
 img {
   width: inherit;
   height: inherit;
+  filter: blur(1.5px);
   z-index: 2;
 }
 
@@ -159,7 +161,7 @@ img {
   top: 0;
   left: 0;
   width: 97%;
-  height: inherit;
+  height: 33.45rem;
   padding-left: 3%;
   padding-bottom: 1%;
   z-index: 2;
@@ -204,6 +206,14 @@ img {
   letter-spacing: 0.1em;
 }
 
+.project_text a {
+  color: #e4dede;
+  padding-left: 0.5em;
+}
+.project_text a:hover {
+  color: #b8b1b1;
+}
+
 .slider_btn {
   position: relative;
   z-index: 9;
@@ -236,6 +246,68 @@ img {
 /* //////////////////////////////////////////////////////// */
 /* MY Journey  */
 
+.tab_container {
+  display: flex;
+  align-content: center;
+  margin: 2%;
+  text-align: center;
+}
+
+.tab {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1em;
+
+  padding: 1.5%;
+  color: azure;
+  border: none;
+  border-radius: 50px;
+  margin: 0 0 -5.5% 5%;
+}
+
+.tab--1 {
+  background-color: indianred;
+}
+.tab--1:hover {
+  background-color: rgb(175, 77, 77);
+  color: rgb(182, 196, 196);
+}
+
+.tab--2 {
+  background-color: slategrey;
+}
+.tab--2:hover {
+  background-color: rgb(82, 100, 119);
+  color: rgb(182, 196, 196);
+}
+
+.tab--3 {
+  background-color: steelblue;
+}
+.tab--3:hover {
+  background-color: rgb(60, 109, 150);
+  color: rgb(182, 196, 196);
+}
+
+.tab--active {
+  transform: translateY(-20%);
+  outline: 1.5px solid black;
+}
+
+.tab_content {
+  display: none;
+  background-color: #efefef;
+  margin: 2%;
+  padding: 5.5% 3% 1% 3%;
+}
+
+.tab_content--active {
+  display: flex;
+  background-color: #efefef;
+  margin: 2%;
+  padding: 5.5% 3% 1% 3%;
+}
+
 /* //////////////////////////////////////////////////////// */
 /* Looking Forward */
 
@@ -248,6 +320,7 @@ img {
   background-color: #efefef;
   width: 30%;
   margin: 1.5%;
+  border: 3px solid black;
   height: 200px;
 }
 
@@ -255,6 +328,7 @@ img {
   background-color: #efefef;
   width: 30%;
   margin: 1.5%;
+  border: 3px solid black;
   height: 200px;
 }
 
@@ -262,6 +336,7 @@ img {
   background-color: #efefef;
   width: 30%;
   margin: 1.5%;
+  border: 3px solid black;
   height: 200px;
 }
 

@@ -55,7 +55,15 @@ btnRight.addEventListener("click", nextProject);
 btnLeft.addEventListener("click", prevProject);
 
 /////////////////////////////////////////////////////////////
-// Move Slider automatically after 4s
+// Move Slider automatically after 8s
+
+const autoSlide = function (number) {
+  setTimeout(nextProject, 8000 * number);
+};
+
+// for (let i = 1; i < 1000; i++) {
+//   autoSlide(i);
+// }
 
 //////////////////////////////////////////////////////////////
 // Displaying project descriptions and blur background
@@ -102,5 +110,30 @@ tabContainer.addEventListener("click", function (e) {
 });
 
 /////////////////////////////////////////////////////////////
+// Revealing Sections on Scroll
+
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+//   section.classList.add("section--hidden");
+// });
+
+/////////////////////////////////////////////////////////////
 // 1. (who-am-I) Insert a video message
-// 2. (window) Load each section after 25% scroll
+// 2. add next-for-me content
+// 3. live remaining projects; add links to project website and git repo

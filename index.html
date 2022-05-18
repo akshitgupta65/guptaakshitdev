@@ -19,10 +19,10 @@
         <p class="icon">PORTFOLIO</p>
         <ul class="nav_items">
           <li>
-            <a class="nav_items-link" href="#my_projects"> My Work</a>
+            <a class="nav_items-link" href="#my_projects"> Projects</a>
           </li>
           <li>
-            <a class="nav_items-link" href="#my_journey"> My Journey</a>
+            <a class="nav_items-link" href="#my_journey"> Journey</a>
           </li>
           <li>
             <a class="nav_items-link" href="#contact"> Contact</a>
@@ -32,200 +32,300 @@
     </header>
 
     <div class="content">
-      <section class="section" id="introduction">
-        <h1>✡️ Know Me Better ✡️</h1>
+      <section class="section section--1" id="introduction">
+        <h1 class="section_title">HI, MY NAME IS</h1>
+        <div class="intro">
+          <h2 class="heading">
+            <br/><br/>
+            <span class="heading_name">Akshit.</span> <br /><br/><br/>
+            <span class="heading_title">I am a Web Developer</span>
+          </h2>
 
-        <div>
           <video controls>
             <source src="#" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="heading">
-          <h2 class="heading_name">AKSHIT GUPTA</h2>
-          <h2 class="heading_job">Frontend Web Developer</h2>
-        </div>
-        <p class="long_text">
+
+        <p class="paragraph">
           Life is full of surprises! Ask me, I am a web developer who has a
-          business and commerce background with my UG degree in Mass
-          Communications and my PG degree in International Marketing. 2 years
-          ago, when I came back to India after completing my PG, I never thought
-          I would be making my own websites someday.
-        </p>
-        <p class="long_text">
-          I still remember the first HTML markup that I wrote. When I saw "Hello
+          business and commerce background with UG degree in Mass Communications
+          and PG degree in International Marketing. At that time, I never
+          thought I would be making my own websites someday.
+          <br />
+          <br />
+          I remember the first HTML markup that I wrote. When I saw "Hello
           World" getting printed on the browser window, I legit got goosebumps.
         </p>
       </section>
 
-      <section class="section" id="my_projects">
-        <h1>✡️ My Work ✡️</h1>
+      <section class="section section--2" id="my_projects">
+        <h1 class="section_title">PROJECTS</h1>
 
-        <div class="window">
+        <div class="slider">
           <div class="project project--1">
-            <div class="project_text">
-              <h2 class="project_text--title">Forkify API</h2>
-              <h3 class="project_text--desc">
-                Recipe application with custom recipe uploads. Recipe
-                application with custom recipe uploads.
-              </h3>
-              <a href="">Visit Website</a>
-              <a href="">Git Repository</a>
+            <div class="window">
+              <div class="project_text">
+                <h2>Forkify API</h2>
+              </div>
+              <img
+                src="img/coverImg--1.png"
+                alt="Cover image of The Forkify API"
+              />
+              <div>
+                <p class="project_description">
+                  Forkify App is a search engine for recipes.
+                  <ul class="project_details">
+                    <li>
+                      It allows to search for numerous recipes from across the Internet and display results using pagination.
+                    </li>
+                    <li>
+                      It also allows to bookmark your favourite recipes in order to save for later and also add new recipes of your own.
+                    </li>
+                    <li>
+                      You can also change the number of servings and Forkify will update the quantity of ingredients for you.
+                    </li>
+                  </ul>
+                </p>
+                <ul class="project_links">
+                  <li>
+                    <a target="blank" href="https://forkify-akshit.netlify.app/"
+                      >Visit Website ➡️</a
+                    >
+                  </li>
+                  <li>
+                    <a target="blank" href="https://github.com/akshitgupta65/forkify">Git Repository ➡️</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <img
-              src="img/coverImg--1.png"
-              alt="Cover image of The Forkify API"
-            />
           </div>
 
           <div class="project project--2">
-            <div class="project_text">
-              <h2 class="project_text--title">Mapty App</h2>
-              <h3 class="project_text--desc">
-                Lets you know your workout data along with your location.
-              </h3>
-              <a href="">Visit Website</a>
-              <a href="">Git Repository</a>
+            <div class="window">
+              <div class="project_text">
+                <h2>Mapty App</h2>
+              </div>
+              <img
+                src="img/coverImg--2.png"
+                alt="Cover image of The Mapty app"
+              />
+              <div>
+                <p class="project_description">
+                  Mapty App is the perfect storehouse for your workouts.
+                  <ul class="project_details">
+                    <li>
+                      It keeps track of all your cycling and running workouts on a map
+                    </li>
+                    <li>
+                      It allows you to add new workouts. Along with that, you can also edit or delete existing workouts on a click.
+                    </li>
+                    <li>
+                      You can easily navigate anywhere on the map to your workout by simply clicking on the workout card.
+                    </li>
+                  </ul>
+                </p>
+                <ul class="project_links">
+                  <li>
+                    <a
+                      target="blank"
+                      href="https://mapty-app-akshit.netlify.app/"
+                      >Visit Website ➡️</a
+                    >
+                  </li>
+                  <li>
+                    <a target="blank" href="#https://github.com/akshitgupta65/mapty-app">Git Repository ➡️</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <img src="img/coverImg--2.png" alt="Cover image of The Mapty app" />
           </div>
+
           <div class="project project--3">
-            <div class="project_text">
-              <h2 class="project_text--title">Bankist App</h2>
-              <h3 class="project_text--desc">
-                It is a Banking App. It keeps account of all transactions and
-                summary of your account.
-              </h3>
-              <a href="">Visit Website</a>
-              <a href="">Git Repository</a>
+            <div class="window">
+              <div class="project_text">
+                <h2>Bankist App</h2>
+              </div>
+              <img
+                src="img/coverImg--3.png"
+                alt="Cover image of The Bankist app"
+              />
+              <div>
+                <p class="project_description">
+                  Bankist App is the gateway to Modern Banking.
+                  <ul class="project_details">
+                    <li>
+                      It displays your username, account balance,summary and transactions of your account.
+                    </li>
+                    <li>
+                      It also contains a 5-minute logout timer for security purpose.
+                    </li>
+                    <li>
+                    It allows you to sort transactions, transfer funds, request loan, currency conversions, and more.
+                    </li>
+                  </ul>
+                </p>
+                <ul class="project_links">
+                  <li>
+                    <a
+                      target="blank"
+                      href="https://bankist-app-akshit.netlify.app/"
+                      >Visit Website ➡️</a
+                    >
+                  </li>
+                  <li>
+                    <a target="blank" href="https://github.com/akshitgupta65/bankist-app">Git Repository ➡️</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <img
-              src="img/coverImg--3.png"
-              alt="Cover image of The Bankist app"
-            />
           </div>
+
           <div class="project project--4">
-            <div class="project_text">
-              <h2 class="project_text--title">Bankist Marketing Website</h2>
-              <h3 class="project_text--desc">
-                This is the official website of Bankist.
-              </h3>
-              <a href="">Visit Website</a>
-              <a href="">Git Repository</a>
+            <div class="window">
+              <div class="project_text">
+                <h2>Bankist Website</h2>
+              </div>
+              <img
+                src="img/coverImg--3.png"
+                alt="Cover image of The Bankist Marketing website"
+              />
+              <div>
+                <p class="project_description">
+                  It is the marketing platform for the Bankist App.
+                  <ul class="project_details">
+                    <li>
+                    The tone of this website promotes going green and digital.
+                    </li>
+                    <li>
+                      It lists out the unique features and applications of the Bankist App.
+                    </li>
+                    <li>
+                      It offers testimonials of current active users.
+                    </li>
+                    <li>
+                      The header and footer of this website has a button to open a new bank account.
+                    </li>
+                  </ul>
+                </p>
+                <ul class="project_links">
+                  <li>
+                    <a target="blank" href="#">Visit Website ➡️</a>
+                  </li>
+                  <li>
+                    <a target="blank" href="https://github.com/akshitgupta65/bankist-website">Git Repository ➡️</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <img src="#" alt="Cover image of The Bankist Marketing website" />
-          </div>
-          <div class="project project--5">
-            <div class="project_text">
-              <h2 class="project_text--title">The Pig Game</h2>
-              <h3 class="project_text--desc">
-                sdklndlkvnvnfknflksdnlksdnfklwenklwnfweknfklwenlwenlwefnwlfnwlnw
-                efjverjvnerjnvjern ejrfnerjfnw rlvrenvjrerj
-              </h3>
-              <a href="">Visit Website</a>
-              <a href="">Git Repository</a>
-            </div>
-            <img src="#" alt="Cover image of The Pig Game app" />
-          </div>
-          <div class="project project--6">
-            <div class="project_text">
-              <h2 class="project_text--title">The Pig Game</h2>
-              <h3 class="project_text--desc">
-                sdklndlkvnvnfknflksdnlksdnfklwenklwnfweknfklwenlwenlwefnwlfnwlnw
-                efjverjvnerjnvjern ejrfnerjfnw rlvrenvjrerj
-              </h3>
-              <a href="">Visit Website</a>
-              <a href="">Git Repository</a>
-            </div>
-            <img src="#" alt="Cover image of The Pig Game app" />
           </div>
         </div>
-        <div>
-          <button class="slider_btn slider_btn--left">&larr;</button>
-          <button class="slider_btn slider_btn--right">&rarr;</button>
-        </div>
+        <button class="slider_btn slider_btn--left">&#8249;</button>
+        <button class="slider_btn slider_btn--right">&#8250;</button>
       </section>
 
-      <section class="section" id="my_journey">
-        <h1>✡️ My Journey ✡️</h1>
+      <section class="section section--3" id="my_journey">
+        <h1 class="section_title">My Journey</h1>
 
         <div class="tab_container">
-          <button class="tab tab--1" data-tab="1">CREATIVE APPROACH</button>
+          <button class="tab tab--1 tab--active" data-tab="1">
+            Creative Approach
+          </button>
           <button class="tab tab--2" data-tab="2">
-            FROM A MARKETEER TO A DEVELOPER
+            From Marketeer to being a Developer
           </button>
-          <button class="tab tab--3 tab--active" data-tab="3">
-            NEXT FOR ME
-          </button>
+          <button class="tab tab--3" data-tab="3">What's Next?</button>
         </div>
-        <div class="tab_content tab_content--1">
-          <p class="long_text">
+        <div class="tab_content tab_content--1 tab_content--active">
+          <p class="paragraph">
             Before stepping into the Tech world, I was at that same old place
-            where atleast once, everyone of you have stood in your lives. And
-            that is <strong>Finding the Right Career</strong>. <br /><br />
+            where everyone has to stand in their lives atleast once. And that is
+            <strong>Finding the Right Career</strong>. <br /><br />
             My willingness to do something creative and artistic initially
-            pushed me towards Mass Communications, that I did from Amity
-            University, Noida. There, I did a radio show, organized an event at
-            the Annual Festival, made a short film, learnt
-            <strong>Adobe Photoshop</strong>. But I was most passionate about
-            photography. (<a
-              class="photography_page"
+            pushed me towards Mass Communications. There, I did a radio show,
+            organized an event at the Annual Festival, made a short film, learnt
+            <strong>Adobe Photoshop</strong>, but
+            <strong>Photography</strong> was something that I was most
+            passionate about. <br />
+            <a
+              class="inline_links"
+              target="blank"
               href="#https://www.facebook.com/akshitguptaaphotography"
-              >Visit my photography page</a
-            >) <br /><br />
-            These 3 years of my graduation, one area that always had my interest
-            was Social Media and I was deeply inspired by the
-            <strong>Digital Makreting</strong>
-            techniques. That's why I pursued International Marketing from the
-            University of Law, London (Berlin campus).
+              >Visit my photography page ➡️
+            </a>
             <br /><br />
-            My creative instinct pushed me one more time this time when I was
-            looking for a job. I worked as a
-            <strong>Content Marketing Intern</strong> in a Berlin-based startup.
+            Something that always held my interest over the period of time was
+            Social Media and I was deeply inspired by the
+            <strong>Digital Makreting</strong>
+            techniques. That's why I decided to pursue International Marketing.
+            <br /><br />
+            My creative instinct pushed me again when I was looking for a job. I
+            worked as a
+            <strong>Content Marketing Intern</strong> where I created content
+            for blog and newsletter.
+            <br />
+            <a class="inline_links" href="#">Download Resume ↘️</a>
           </p>
         </div>
         <div class="tab_content tab_content--2">
-          <p class="long_text">
+          <p class="paragraph">
             While applying for jobs in digital marketing, I came across HTML,
             CSS and JavaScript in many job descriptions. On doing some research,
             I realized that a CS degree is not needed to become a developer.
             <br /><br />
-            With <em>Knowledge</em>, <em>Skill</em> and <em>Practice</em>,
-            anyone can do it. Not to forget how insanely creative and intense
-            web development is. I followed my instinct and just went for it.
-            <br /><br />
+            With <strong>knowledge</strong>, <strong>skill</strong> and
+            <strong>practice</strong>, anyone can do it. Not to forget how
+            insanely creative and intense web development is. I followed my
+            instinct and just went for it. <br /><br />
             What started off as an effort to boost my former career turned into
-            a 9 month grind that put me where I am right now -
-            <br /><br />
+            a 9 month grind that put me where I am right now - <br /><br />
+            <span class="blockquote">
+              <q
+                >A Frontend Web Developer looking for opportunities to
+                kick-start my career</q
+              >
+            </span>
           </p>
-          <blockquote>
-            A Frontend Web Developer looking for opportunities to kick-start my
-            career.
-          </blockquote>
         </div>
-        <div class="tab_content tab_content--3 tab_content--active">
-          <p class="long_text">
-            While applying for jobs in digital marketing, I came across HTML,
-            CSS and JavaScript in many job descriptions. On doing some research,
-            I realized that a CS degree is not needed to become a developer.
+        <div class="tab_content tab_content--3">
+          <p class="paragraph">
+            One of the key ingredients in becoming a competent web developer is
+            continuous learning and increasing our knowledge database. It is
+            pivotal for a budding developer to be familiar with industry
+            standards and must have the ability to work with popular libraries
+            and frameworks.
             <br /><br />
-            With <em>Knowledge</em>, <em>Skill</em> and <em>Practice</em>,
-            anyone can do it. Not to forget how insanely creative and intense
-            web development is. I followed my instinct and just went for it.
-            <br /><br />
-            What started off as an effort to boost my former career turned into
-            a 9 month grind that put me where I am right now -
-            <br /><br />
+            My next step is to learn <strong>jQuery</strong>. Another
+            high-in-demand library that I am really looking forward to is
+            <strong>React</strong>. Finally, to learn about designing resposive
+            webpages, I would master <strong>Bootstrap</strong>. <br /><br />
+            That's why I have started a course on
+            <strong>freeCodeCamp.org</strong> that is not only teaching me
+            everything I need at this stage, but also giving me projects to work
+            and learn. <br />
+            <a
+              class="inline_links"
+              target="blank"
+              href="https://www.freecodecamp.org/learn/front-end-development-libraries/"
+              >Frontend Development Library Course</a
+            >
           </p>
         </div>
       </section>
     </div>
 
-    <section class="section" id="contact">
+    <section class="section section--4" id="contact">
       <footer>
-        <h1>✡️ Contact ✡️</h1>
+        <h1>Contact</h1>
         <table>
           <tr>
+            <td>
+              <a
+                href="https://www.linkedin.com/in/akshit-gupta-120980155/"
+                target="blank"
+                >Send Email</a
+              >
+            </td>
             <td>
               <a
                 href="https://www.linkedin.com/in/akshit-gupta-120980155/"

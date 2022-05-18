@@ -1,7 +1,8 @@
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 
-const projects = document.querySelectorAll(".project");
+const projects = document.querySelectorAll(".window");
+
 const btnLeft = document.querySelector(".slider_btn--left");
 const btnRight = document.querySelector(".slider_btn--right");
 
@@ -23,7 +24,7 @@ const stickyNav = function (entries) {
 
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  threshold: 0,
+  rootMargin: "",
 });
 
 headerObserver.observe(header);
@@ -34,6 +35,12 @@ headerObserver.observe(header);
 const displayProject = function (projectCount) {
   projects.forEach((project, index) => {
     project.style.transform = `translateX(${100 * (index - projectCount)}%)`;
+    if (project.style.transform === "translateX(0%)") {
+      project.style.opacity = 1;
+    }
+    if (project.style.transform !== "translateX(0%)") {
+      project.style.opacity = 0;
+    }
   });
 };
 displayProject(0);
@@ -70,7 +77,7 @@ const autoSlide = function (number) {
 
 const mouseEnter = function (e) {
   e.preventDefault();
-  const targetEl = this.querySelector(".project_text");
+  const targetEl = this.querySelector("img");
   targetEl.classList.add("animation_fadeIn");
   targetEl.classList.remove("animation_fadeOut");
   targetEl.style.zIndex = "3";
@@ -78,10 +85,10 @@ const mouseEnter = function (e) {
 
 const mouseLeave = function (e) {
   e.preventDefault();
-  const targetEl = this.querySelector(".project_text");
+  const targetEl = this.querySelector("img");
   targetEl.classList.add("animation_fadeOut");
   targetEl.classList.remove("animation_fadeIn");
-  targetEl.style.zIndex = "2";
+  targetEl.style.zIndex = "1";
 };
 
 projects.forEach((project) => {
@@ -134,6 +141,19 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 // });
 
 /////////////////////////////////////////////////////////////
-// 1. (who-am-I) Insert a video message
-// 2. add next-for-me content
-// 3. live remaining projects; add links to project website and git repo
+// 3. Improve project descriptions
+// 4. check all links
+
+////////////////////////////////////
+// Key points
+
+// 1. Colors: Make color gradients. Use Vibrant colors.
+
+// 2. video: insert video, upload on youtube
+////--- remove know me better(as it will be a part of video description)
+
+// 3. Projects: reset and prepare silder again, improve descriptions
+
+// 4. add mail id
+
+// 5. remove Hi, I am --> add HELLO WORLD animation

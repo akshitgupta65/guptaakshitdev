@@ -68,12 +68,12 @@ const autoSlide = function (number) {
   setTimeout(nextProject, 8000 * number);
 };
 
-// for (let i = 1; i < 1000; i++) {
-//   autoSlide(i);
-// }
+for (let i = 1; i < 1000; i++) {
+  autoSlide(i);
+}
 
 //////////////////////////////////////////////////////////////
-// Displaying project descriptions and blur background
+// Displaying project title
 
 const mouseEnter = function (e) {
   e.preventDefault();
@@ -132,28 +132,16 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.15,
 });
 
-// allSections.forEach(function (section) {
-//   sectionObserver.observe(section);
-//   section.classList.add("section--hidden");
-// });
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
 
-/////////////////////////////////////////////////////////////
-// 3. Improve project descriptions
-// 4. check all links
-
-////////////////////////////////////
+//////////////////////////////////
 // Key points
 
-// 1. Colors: Make color gradients. Use Vibrant colors.
-
 // 2. video: insert video, upload on youtube
-////--- remove know me better(as it will be a part of video description)
-
-// 3. Projects: reset and prepare silder again, improve descriptions
-
-// 4. add mail id
 
 // 5. remove Hi, I am --> add HELLO WORLD animation

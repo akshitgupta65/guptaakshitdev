@@ -26,11 +26,11 @@ section {
 
   margin-top: 0.2%;
   margin-bottom: 0;
-  padding: 8% 0 0 0;
+  padding: 4% 0 0 0;
 }
 
 .paragraph {
-  font-size: 1.5em;
+  font-size: 1.2em;
   background-color: #fd7435;
   color: #f3f3f3;
   line-height: 1.6em;
@@ -309,12 +309,12 @@ img {
 }
 
 .slider_btn--left {
-  top: 105rem;
+  top: 96rem;
   left: 2%;
 }
 
 .slider_btn--right {
-  top: 105rem;
+  top: 96rem;
   left: 92%;
 }
 
@@ -424,11 +424,12 @@ img {
 }
 
 .section--4 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   letter-spacing: 0.1em;
   font-weight: 500;
   font-family: Georgia, "Times New Roman", Times, serif;
   padding-left: 5%;
+  padding-bottom: 1%;
 }
 
 footer {
@@ -474,4 +475,9 @@ table a:hover {
 
 .copyright span {
   font-size: 1.5em;
+}
+
+.notice {
+  font-style: italic;
+  font-size: 0.7em;
 }

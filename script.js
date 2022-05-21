@@ -65,7 +65,7 @@ btnLeft.addEventListener("click", prevProject);
 // Move Slider automatically after 8s
 
 const autoSlide = function (number) {
-  setTimeout(nextProject, 8000 * number);
+  setTimeout(nextProject, 15000 * number);
 };
 
 for (let i = 1; i < 1000; i++) {
